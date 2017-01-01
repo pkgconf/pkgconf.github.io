@@ -65,16 +65,18 @@ but this is not a typical deployment of freedesktop.org's pkg-config.</p>
     </tr>
     <tr>
       <th><code>--cflags</code> options are stackable</th>
-      <td colspan="5" class="background-good">yes</td>
+      <td colspan="2" class="background-good">yes, preserves fragment order</td>
+      <td colspan="3" class="background-okay">yes, fragments reordered arbitrarily</td>
     </tr>
     <tr>
       <th><code>--libs</code> options are stackable</th>
-      <td colspan="5" class="background-good">yes</td>
+      <td colspan="2" class="background-good">yes, preserves fragment order</td>
+      <td colspan="3" class="background-okay">yes, fragments reordered arbitrarily</td>
     </tr>
     <tr>
-      <th>CLI options don't effect fragment ordering</th>
-      <td colspan="2" class="background-good">yes</td>
-      <td colspan="3" class="background-bad">no</td>
+      <th>CLI options effect fragment ordering</th>
+      <td colspan="2" class="background-good">no</td>
+      <td colspan="3" class="background-bad">yes</td>
     </tr>
     <tr>
       <th>Intelligent <code>PKG_CONFIG_SYSROOT_DIR</code> handling</th>
