@@ -1,5 +1,6 @@
 title: pkgconf
 github_username:  pkgconf
+latest_version: 1.1.0
 
 # Build settings
 markdown: kramdown
