@@ -56,7 +56,7 @@ but this is not a typical deployment of freedesktop.org's pkg-config as it creat
       <th>Dependency resolution algorithm</th>
       <td colspan="2" class="background-good">acyclic graph traversal</td>
       <td class="background-bad">linear search</td>
-      <td colspan="2" class="background-okay">naive topological search with hashtable<br>(for breaking cycles)</td>
+      <td colspan="2" class="background-okay">blind traversal<br>with hashtable of visited nodes<br>(for cycle breaking)</td>
     </tr>
     <tr>
       <th>Fragment/flag merging algorithm</th>
