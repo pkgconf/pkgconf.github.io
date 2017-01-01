@@ -3,7 +3,7 @@ layout: page
 title: Feature comparison
 ---
 
-<p>A comparison of features between pkgconf 1.0, 1.1 and pkg-config 0.29.1 and it's latest development version.
+<p>A comparison of features between pkgconf 1.0, 1.1 and pkg-config 0.29.1 and its latest development version.
 I have tried to be as objective as possible, but it should be disclosed that I am obviously the developer of
 pkgconf and not pkg-config, so I may be biased in what is compared.</p>
 
@@ -88,6 +88,13 @@ but this is not a typical deployment of freedesktop.org's pkg-config.</p>
       <td colspan="2" class="background-good">when needed</td>
       <td class="background-bad">all files</td>
       <td colspan="2" class="background-good">when needed</td>
+    </tr>
+    <tr>
+      <th>Deduplicates search directories</th>
+      <td class="background-bad">no</td>
+      <td class="background-good">by path name and (device node + inode)</td>
+      <td colspan="3" class="background-bad">no</td>
+    </tr>
     <tr>
       <th colspan="6">Resolver supports:</th>
     </tr>
