@@ -1,6 +1,12 @@
 ---
-# You don't need to edit this file, it's empty on purpose.
-# Edit theme's home layout instead if you wanna make some changes
-# See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-layout: home
+layout: default
+title: "About pkgconf"
 ---
+
+`pkgconf` is a program which helps to configure compiler and linker flags for
+development frameworks.  It is similar to pkg-config from freedesktop.org, providing additional
+functionality while also maintaining compatibility.
+
+`libpkgconf` is a library which provides access to most of `pkgconf`'s functionality, to allow
+other tooling such as compilers and IDEs to discover and use frameworks configured by
+pkgconf.

@@ -1,0 +1,80 @@
+.navbar-default {
+  background: rgba(44, 62, 80, 0.8) !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  font-family: Roboto;
+  font-weight: 100;
+}
+
+.navbar-default .navbar-header {
+  background: rgba(53, 86, 119, 0.5) !important;
+  color: #eee;
+}
+
+.navbar-default .navbar-brand {
+  color: #eee;
+}
+
+.navbar-default .navbar-brand:hover {
+  color: #fff;
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: #eee;
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+  color: #fff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Roboto;
+  font-weight: 300;
+}
+
+h1 > a:hover, h2 > a:hover, h3 > a:hover, h4 > a:hover, h5 > a:hover, h6 > a:hover {
+  text-decoration: none !important;
+}
+
+body {
+  font-family: "Open Sans";
+  font-weight: 300;
+}
+
+.navbar {
+  margin-bottom: 0 !important;
+}
+
+canvas {
+  top: 0px;
+  width: 100%;
+  min-height: 12em;
+  z-index: -1;
+}
+
+.heading {
+  position: relative;
+  z-index: 1000;
+  background: #000;
+  opacity: 0.75;
+  color: #fff;
+  top: 178px;
+}
+
+.heading > h1 {
+  font-size: 300%;
+  padding: 0.15em;
+}
+
+.container-heading {
+  margin-top: -90px !important;
+}
+
+.container-fluid {
+  padding: 0 !important;
+}
+
+.container-fluid .row-fluid .col-md-6, .content {
+  padding-left: 10px !important;
+  padding-right: 10px !important;
+}
