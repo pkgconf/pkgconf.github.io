@@ -54,7 +54,7 @@ but this is not a typical deployment of freedesktop.org's pkg-config as it creat
     </tr>
     <tr>
       <th>Dependency resolution algorithm</th>
-      <td colspan="2" class="background-good">acyclic graph traversal</td>
+      <td colspan="2" class="background-good">acyclic graph traversal<br>(cycles broken at build time)</td>
       <td class="background-bad">linear search</td>
       <td colspan="2" class="background-okay">blind traversal<br>with hashtable of visited nodes<br>(for cycle breaking)</td>
     </tr>
