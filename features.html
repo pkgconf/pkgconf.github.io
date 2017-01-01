@@ -1,0 +1,117 @@
+---
+layout: page
+title: Feature comparison
+---
+
+<p>A comparison of features between pkgconf 1.0, 1.1 and pkg-config 0.29.1 and it's latest development version.
+I have tried to be as objective as possible, but it should be disclosed that I am obviously the developer of
+pkgconf and not pkg-config, so I may be biased in what is compared.</p>
+
+<p>Future directions could include additionally comparing against OpenBSD's implementation and other alternative
+implementations.</p>
+
+<p>For completeness, a copy of pkg-config compiled without the <code>--with-internal-glib</code> flag is provided,
+but this is not a typical deployment of freedesktop.org's pkg-config.</p>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th></th>
+      <th>pkgconf<br>1.0.2</th>
+      <th>pkgconf<br>1.1.0</th>
+      <th>pkg-config<br>0.29.1</th>
+      <th>pkg-config<br><code>git</code></th>
+      <th>pkg-config<br><code>git</code>(system glib)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>License</th>
+      <td colspan="2" class="background-good">ISC-like</td>
+      <td colspan="3" class="background-okay">GPLv2</td>
+    </tr>
+    <tr>
+      <th>Complete binary set size (.text)</th>
+      <td class="background-good">42 kB</td>
+      <td class="background-good">58 kB</td>
+      <td class="background-bad">564 kB</td>
+      <td class="background-bad">568 kB</td>
+      <td class="background-good">39 kB</td>
+    </tr>
+    <tr>
+      <th>Dependencies</th>
+      <td colspan="2" class="background-good">none</td>
+      <td colspan="2" class="background-okay">bundled <code>glib-2.0</code></td>
+      <td class="background-bad"><code>glib-2.0</code></td>
+    </tr>
+    <tr>
+      <th>Lines of code compiled</th>
+      <td class="background-good">4,597</td>
+      <td class="background-good">6,210</td>
+      <td class="background-bad">192,111</td>
+      <td class="background-bad">193,178</td>
+      <td class="background-good">3,642</td>
+    </tr>
+    <tr>
+      <th>Dependency resolution algorithm</th>
+      <td colspan="2" class="background-good">acyclic graph traversal</td>
+      <td class="background-bad">linear search</td>
+      <td colspan="2" class="background-okay">topological search with hashtable</td>
+    </tr>
+    <tr>
+      <th>Fragment/flag merging algorithm</th>
+      <td colspan="2" class="background-good">merge-front or merge-back<br>depending on fragment type</td>
+      <td colspan="3" class="background-okay">multi-merge for some fragment types only</td>
+    </tr>
+    <tr>
+      <th><code>--cflags</code> options are stackable</th>
+      <td colspan="5" class="background-good">yes</td>
+    </tr>
+    <tr>
+      <th><code>--libs</code> options are stackable</th>
+      <td colspan="5" class="background-good">yes</td>
+    </tr>
+    <tr>
+      <th>CLI options don't effect fragment ordering</th>
+      <td colspan="2" class="background-good">yes</td>
+      <td colspan="3" class="background-bad">no</td>
+    </tr>
+    <tr>
+      <th>Intelligent <code>PKG_CONFIG_SYSROOT_DIR</code> handling</th>
+      <td colspan="2" class="background-good">yes</td>
+      <td colspan="3" class="background-bad">blindly appends path to <code>$(prefix)</code></td>
+    </tr>
+    <tr>
+      <th colspan="6">Resolver supports:</th>
+    </tr>
+    <tr>
+      <th><code>Conflicts</code> rules</th>
+      <td colspan="5" class="background-good">yes</td>
+    </tr>
+    <tr>
+      <th><code>Requires</code> rules</th>
+      <td colspan="5" class="background-good">yes</td>
+    </tr>
+    <tr>
+      <th><code>Requires.private</code> rules</th>
+      <td colspan="5" class="background-good">yes</td>
+    </tr>
+    <tr>
+      <th><code>Provides</code> rules</th>
+      <td colspan="1" class="background-okay">partial</td>
+      <td colspan="1" class="background-good">yes</td>
+      <td colspan="3" class="background-okay">partial</td>
+    </tr>
+    <tr>
+      <th><code>CFLAGS.private</code> entries</th>
+      <td colspan="2" class="background-good">yes</td>
+      <td colspan="3" class="background-bad">no</td>
+    </tr>
+    <tr>
+      <th><code>--static --pure</code> mode</th>
+      <td colspan="1" class="background-bad">no</td>
+      <td colspan="1" class="background-good">yes</td>
+      <td colspan="3" class="background-bad">no</td>
+    </tr>
+  </tbody>
+</table>

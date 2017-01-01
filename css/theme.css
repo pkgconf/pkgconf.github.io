@@ -106,3 +106,24 @@ canvas {
   margin: auto;
   margin-top: 1em;
 }
+
+.no-leadin {
+  margin-top: 4em;
+}
+
+.background-section {
+  background: #b0a0ff;
+}
+
+.background-good {
+  background: #a0ffa0;
+}
+
+.background-okay {
+  background: #ffff80;
+}
+
+.background-bad {
+  background: #ff9090;
+}
+
