@@ -47,16 +47,6 @@
            </div>
          </div>
        </header>
-       <div class="container-heading">
-         <div class="heading">
-           <h1>
-               {{ page.title }}
-               {% if page.date %}<span class="pull-right"><small>{{ page.date | date_to_string }}</small></span>{% endif %}
-           </h1>
-         </div>
-       </div>
-       <div class="container-fluid">
-         {{ content }}
-       </div>
+       {{ content }}
     </body>
 </html>

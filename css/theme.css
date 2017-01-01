@@ -52,22 +52,9 @@ canvas {
   z-index: -1;
 }
 
-.heading {
-  position: relative;
-  z-index: 1000;
-  background: #000;
-  opacity: 0.75;
-  color: #fff;
-  top: 178px;
-}
-
 .heading > h1 {
   font-size: 300%;
   padding: 0.15em;
-}
-
-.container-heading {
-  margin-top: -90px !important;
 }
 
 .container-fluid {
@@ -77,4 +64,8 @@ canvas {
 .container-fluid .row-fluid .col-md-6, .content {
   padding-left: 10px !important;
   padding-right: 10px !important;
+}
+
+.container-heading {
+  margin-top: 4em !important;
 }
